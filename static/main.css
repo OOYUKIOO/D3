@@ -1,0 +1,20 @@
+h1{
+    color:black;
+    font-size:70px;
+    text-align:center;
+    text-shadow:4px 4px #999999;
+}
+
+.panel-primary{
+    margin-top:30px;
+    width:1000px;
+}
+
+.panel-heading{
+    font-size:30px;
+    font-weight:bold;
+}
+.panel-body{
+    font-size:20px;
+    padding:20px;
+}
