@@ -13,26 +13,44 @@
     <h1> Pandas </h1>
     <img src="IMG/Panda.png" class="img-responsive center-block"style="height:300px;width:450px;">
 
-    <div class="col-md-6">
-      <div class="panel panel-primary">
-	<div class="panel-heading">What is Pandas?</div>
-	<div class="panel-body">
-	  <p>Pandas is a Python module. This library is written for data analysis and management with high performance and high efficiency.</p>
-	  <p>It has a structure similar to spreadsheet, with columns and/or rows. A 1-Dimensional data structure is called series, and a 2-dimensional structure is called dataframe.<p>
-	</div>
-      </div>
+    <ul class="nav nav-pills">
+      <li class="active"><a data-toggle="pill" href="#home">Home</a></li
+      <li><a data-toggle="pill" href="#adv"></a>Advantages</li>
+      <li><a data-toggle="pill" href="#df"></a>DataFrame</li>
+      <li><a data-toggle="pill" href="#index"></a>Change Index</li>
+      <li><a data-toggle="pill" href="#header"></a>Change Header</li>
+      <li><a data-toggle="pill" href="#output"></a>Output</li>
+      <li><a data-toggle="pill" href="#concat"></a>Concatenate</li>
+      <li><a data-toggle="pill" href="#pivot"></a>Pivot</li>
+    </ul>
 
-      <div class="panel panel-primary">
-	<div class="panel-heading">Advantages</div>
-	<div class="panel-body">
-	  <ul>
-	    <li>Easy data tracking: All columns and rows are automatically labeled with header and index respectively. Users can make reference to the columns or rows using their corresponding names instead of number.</li>
-	    <li>Can contain different data types: Within the same data structure, there can be different types of data, such as integer, float, string, etc. </li>
-	    <li>Easy data management: Pandas is equipped with very convenient tools to help you manipulate your data as easily and fast as possible. Some of Pandas' strengths include boolean indexing, pivot table, multi-indexing, crosstab, merge dataframes, sorting dataframes, and graphing. Some of these techniques will be shown later.</li>
-	    <li>Strong I/O capabilities:<br><img src="IMG/IO_Input.PNG" style="width:300px;height:300px;"><img src="IMG/IO_Output.PNG" style="width:300px;height:300px;"></li>
-	  </ul>
+    <div class="tab-content">
+      <div id="home" class="tab-pane fade in active">
+	<div class="panel panel-primary">
+	  <div class="panel-heading">What is Pandas?</div>
+	  <div class="panel-body">
+	    <p>Pandas is a Python module. This library is written for data analysis and management with high performance and high efficiency.</p>
+	    <p>It has a structure similar to spreadsheet, with columns and/or rows. A 1-Dimensional data structure is called series, and a 2-dimensional structure is called dataframe.<p>
+	  </div>
 	</div>
       </div>
+    </div>
+
+    <div class="tab-content">
+      <div id="adv" class="tab-pane fade">
+	<div class="panel panel-primary">
+	  <div class="panel-heading">Advantages</div>
+	  <div class="panel-body">
+	    <ul>
+	      <li>Easy data tracking: All columns and rows are automatically labeled with header and index respectively. Users can make reference to the columns or rows using their corresponding names instead of number.</li>
+	      <li>Can contain different data types: Within the same data structure, there can be different types of data, such as integer, float, string, etc. </li>
+	      <li>Easy data management: Pandas is equipped with very convenient tools to help you manipulate your data as easily and fast as possible. Some of Pandas' strengths include boolean indexing, pivot table, multi-indexing, crosstab, merge dataframes, sorting dataframes, and graphing. Some of these techniques will be shown later.</li>
+	      <li>Strong I/O capabilities:<br><img src="IMG/IO_Input.PNG" style="width:300px;height:300px;"><img src="IMG/IO_Output.PNG" style="width:300px;height:300px;"></li>
+	    </ul>
+	  </div>
+	</div>
+      </div>
+    </div>
 
       <div class="panel panel-primary">
 	<div class="panel-heading">Create Dataframe</div>
