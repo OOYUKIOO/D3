@@ -5,142 +5,143 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">  
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link href="static/main.css" rel="stylesheet">
   <title>Pandas</title>
   </head>
 
   <body>
     <h1> Pandas </h1>
-    <img src="IMG/Panda.png" class="img-responsive center-block"style="height:300px;width:450px;">
+    <img src="IMG/Panda.png" class="img-responsive center-block"style="height:300px;width:450px;"><hr>
+    <center>
+      <div class="col-md-12 text-center">
+	<ul class="nav nav-pills center-pills">
+	  <li class="active"><a data-toggle="pill" href="#home">Home</a></li>
+	  <li><a data-toggle="pill" href="#adv">Advantages</a></li>
+	  <li><a data-toggle="pill" href="#df">DataFrame</a></li>
+	  <li><a data-toggle="pill" href="#index">Change Index</a></li>
+	  <li><a data-toggle="pill" href="#header">Change Header</a></li>
+	  <li><a data-toggle="pill" href="#output">Output</a></li>
+	  <li><a data-toggle="pill" href="#concat">Concatenate</a></li>
+	  <li><a data-toggle="pill" href="#pivot">Pivot</a></li>
+	</ul>
+      </div>
+      <br><br><hr>
 
-    <ul class="nav nav-pills">
-      <li class="active"><a data-toggle="pill" href="#home">Home</a></li
-      <li><a data-toggle="pill" href="#adv"></a>Advantages</li>
-      <li><a data-toggle="pill" href="#df"></a>DataFrame</li>
-      <li><a data-toggle="pill" href="#index"></a>Change Index</li>
-      <li><a data-toggle="pill" href="#header"></a>Change Header</li>
-      <li><a data-toggle="pill" href="#output"></a>Output</li>
-      <li><a data-toggle="pill" href="#concat"></a>Concatenate</li>
-      <li><a data-toggle="pill" href="#pivot"></a>Pivot</li>
-    </ul>
-
-    <div class="tab-content">
-      <div id="home" class="tab-pane fade in active">
-	<div class="panel panel-primary">
-	  <div class="panel-heading">What is Pandas?</div>
-	  <div class="panel-body">
-	    <p>Pandas is a Python module. This library is written for data analysis and management with high performance and high efficiency.</p>
-	    <p>It has a structure similar to spreadsheet, with columns and/or rows. A 1-Dimensional data structure is called series, and a 2-dimensional structure is called dataframe.<p>
+      <div class="tab-content">
+	<div id="home" class="tab-pane fade in active">
+	  <div class="panel panel-primary">
+	    <div class="panel-heading">What is Pandas?</div>
+	    <div class="panel-body">
+	      <p>Pandas is a Python module. This library is written for data analysis and management with high performance and high efficiency.</p>
+	      <p>It has a structure similar to spreadsheet, with columns and/or rows. A 1-Dimensional data structure is called series, and a 2-dimensional structure is called dataframe.<p>
+	    </div>
 	  </div>
 	</div>
-      </div>
-    </div>
 
-    <div class="tab-content">
-      <div id="adv" class="tab-pane fade">
-	<div class="panel panel-primary">
-	  <div class="panel-heading">Advantages</div>
-	  <div class="panel-body">
-	    <ul>
-	      <li>Easy data tracking: All columns and rows are automatically labeled with header and index respectively. Users can make reference to the columns or rows using their corresponding names instead of number.</li>
-	      <li>Can contain different data types: Within the same data structure, there can be different types of data, such as integer, float, string, etc. </li>
-	      <li>Easy data management: Pandas is equipped with very convenient tools to help you manipulate your data as easily and fast as possible. Some of Pandas' strengths include boolean indexing, pivot table, multi-indexing, crosstab, merge dataframes, sorting dataframes, and graphing. Some of these techniques will be shown later.</li>
-	      <li>Strong I/O capabilities:<br><img src="IMG/IO_Input.PNG" style="width:300px;height:300px;"><img src="IMG/IO_Output.PNG" style="width:300px;height:300px;"></li>
-	    </ul>
+	<div id="adv" class="tab-pane fade">
+	  <div class="panel panel-primary">
+	    <div class="panel-heading">Advantages</div>
+	    <div class="panel-body">
+	      <ul>
+		<li><b>Easy data tracking</b>: <br>All columns and rows are automatically labeled with header and index respectively. Users can make reference to the columns or rows using their corresponding names instead of number.</li><br>
+		<li><b>Can contain different data types</b>: <br>Within the same data structure, there can be different types of data, such as integer, float, string, etc. </li><br>
+		<li><b>Easy data management</b>: <br>Pandas is equipped with very convenient tools to help you manipulate your data as easily and fast as possible. Some of Pandas' strengths include boolean indexing, pivot table, multi-indexing, crosstab, merge dataframes, sorting dataframes, and graphing. Some of these techniques will be shown later.</li><br>
+		<li><b>Strong I/O capabilities</b>:<br>Below are all the different ways of importing and exporting data from and to various file types<br><img src="IMG/IO_Input.PNG" style="width:300px;height:300px;"><img src="IMG/IO_Output.PNG" style="width:300px;height:300px;"></li>
+	      </ul>
+	    </div>
 	  </div>
 	</div>
-      </div>
-    </div>
+	
+	<div id="df" class="tab-pane fade">
+	  <div class="panel panel-primary">
+	    <div class="panel-heading">Create Dataframe</div>
+	    <div class="panel-body">
+	      <p>There are many ways of creating a Pandas Dataframe, as you can see there are many ways of importing data in Pandas. One of the easiest ways to do so is to create a Dataframe from a dictionary.<p>
+		<br><img class="img-responsive center-block" src="IMG/DicInput.PNG" style="width:450px;height:200px;"><br>
+	      <p> Or you can create one from CSV file.</p>
+	      <br><img class="img-responsive center-block" src="IMG/CSVInput.PNG" style="width:350px;height:100px;"><br>
+	      <p>Either way, the Dataframe will look like this:<p>
+		<br><img class="img-responsive center-block" src="IMG/print0.PNG" style="width:300px;height:150px;"><br>
+	      <p>Note that the keys of the dictionary became the headers, and the values became the contents of each columns.</p>
+	    </div>
+	  </div>
+	</div>
 
-      <div class="panel panel-primary">
-	<div class="panel-heading">Create Dataframe</div>
-	<div class="panel-body">
-	  <p>There are many ways of creating a Pandas Dataframe, as you can see there are many ways of importing data in Pandas. One of the easiest ways to do so is to create a Dataframe from a dictionary.<p>
-	    <br><img class="img-responsive center-block" src="IMG/DicInput.PNG" style="width:450px;height:200px;"><br>
-	  <p> Or you can create one from CSV file.</p>
-	  <br><img class="img-responsive center-block" src="IMG/CSVInput.PNG" style="width:350px;height:100px;"><br>
-	  <p>Either way, the Dataframe will look like this:<p>
-	    <br><img class="img-responsive center-block" src="IMG/print0.PNG" style="width:300px;height:150px;"><br>
-	  <p>Note that the keys of the dictionary became the headers, and the values became the contents of each columns.</p>
+	<div id="index" class="tab-pane fade">
+	  <div class="panel panel-primary">
+	    <div class="panel-heading">Set Index</div>
+	    <div class="panel-body">
+	      <p>If you don't like the automatically generated index numbers that Pandas assign to each row, you can change it easily. For instance, if you are creating a Dataframe from dictionary, and you want to make the column 'ID' as the index:</p>
+	      <br><img class="img-responsive center-block" src="IMG/setIndex0.PNG" style="width:450px;height:200px;"><br>
+	      <p>And then the resulting Dataframe will look like this:</p>
+	      <br><img class="img-responsive center-block" src="IMG/setindexPrint.PNG" style="width:200px;height:100px;"><br>
+	      <p>So instead of using the automatically generated index number, now the Dataframe uses the column ID as its index.
+	    </div>
+	  </div>
 	</div>
-      </div>
+	<div id="header" class="tab-pane fade">
+	  <div class="panel panel-primary">
+	    <div class="panel-heading">Set Header</div>
+	    <div class="panel-body">
+	      <p>Let's imagine that you have a CSV file which contains this:</p>
+	      <br><img class="img-responsive center-block" src="IMG/csv.PNG" style="width:250px;height:100px;"><br>
+	      <p>If you don't specify the headers, then the Dataframe will use the first row as headers. Which means that the first column's header will be "0", the second one "Katherine", and the third one "21". And these headers cannot help us to identify the columns correctly, we can easily change the headers by doing this:</p>
+	      <br><img class="img-responsive center-block" src="IMG/setHeaderPNG.PNG" style="width:450px;height:50px;"><br>
+	      <p>After manually setting the headers to be "Col1", "Col2", and "Col3", the new Dataframe will look like this:</p>
+	      <br><img class="img-responsive center-block" src="IMG/setHeaderPrint.PNG" style="width:250px;height:100px;"><br>
+	    </div>
+	  </div>
+	</div>
 
-      <div class="panel panel-primary">
-	<div class="panel-heading">Set Index</div>
-	<div class="panel-body">
-	  <p>If you don't like the automatically generated index numbers that Pandas assign to each row, you can change it easily. For instance, if you are creating a Dataframe from dictionary:</p>
-	  <br><img class="img-responsive center-block" src="IMG/setIndex0.PNG" style="width:450px;height:200px;"><br>
-	  <p>And then the resulting Dataframe will look like this:</p>
-	  <br><img class="img-responsive center-block" src="IMG/setindexPrint.PNG" style="width:200px;height:100px;"><br>
-	  <p>So instead of using the automatically generated index number, now the Dataframe uses the column ID as its index.
+	<div id="output" class="tab-pane fade">
+	  <div class="panel panel-primary">
+	    <div class="panel-heading">Output</div>
+	    <div class="panel-body">
+	      <p>Now if you want to output the Dataframe, there is a lot of flexibilities here. If you had imported the data from a CSV file, you don't have to necessarily ouput the data to another CSV file. You can output to any other format that is made available to you by Pandas. And you don't have to worry about the convertion, Pandas take care of this for you.</p>
+	      <p>You can either output the entire Dataframe:</p>
+	      <br><img src="IMG/outputCSV0.PNG" style="width:250px;height:100px;">                <img src="IMG/outputCSV.PNG" style="width:300px;height:150px;"><br><br>
+	      <p>Or you can output part of the Dataframe:</p>
+	      <br><img src="IMG/outputCSV1.PNG" style="width:250px;height:100px;">                <img src="IMG/outputCSV2.PNG" style="width:200px;height:100px;"><br>
+	    </div>
+	  </div>
 	</div>
-      </div>
 
-      <div class="panel panel-primary">
-	<div class="panel-heading">Set Header</div>
-	<div class="panel-body">
-	  <p>Let's imagine that you have a CSV file which contains this:</p>
-	  <br><img class="img-responsive center-block" src="IMG/csv.PNG" style="width:250px;height:100px;"><br>
-	  <p>If you don't specify the headers, then the Dataframe will use the first row as headers. Which means that the first column's header will be "0", the second one "Katherine", and the third one "21". Since these kind of headers cannot help us to identify the columns, we can easily change the headers by doing this:</p>
-	  <br><img class="img-responsive center-block" src="IMG/setHeaderPNG.PNG" style="width:450px;height:50px;"><br>
-	  <p>After manually setting the headers to be "Col1", "Col2", and "Col3", the new Dataframe will look like this:</p>
-	   <br><img class="img-responsive center-block" src="IMG/setHeaderPrint.PNG" style="width:250px;height:100px;"><br>
+	<div id="concat" class="tab-pane fade">
+	  <div class="panel panel-primary">
+	    <div class="panel-heading">Concatenate</div>
+	    <div class="panel-body">
+	      <p>Now, suppose there are two Dataframes created from two different dictionaries. You can combine these two Dataframes together, and they would look like this:</p>
+	      <br><img class="img-responsive center-block" src="IMG/concatenate01.png" style="width:350px;height:250px;"><br>
+	      <br><img class="img-responsive center-block" src="IMG/concatenateB01.png" style="width:350px;height:250px;"><br>
+	      <p>As you can see, it doesn't matter if the two Dataframes have different column lengths, because Pandas already take care of the empty spaces created during the concatenation process by filling it up with "NaN," which is used to denote empty/null/missing data. This can make life better!</p>
+	      <p>You can even give each individual Dataframes an unique key so that even after concatenating them together, you can make reference to different Dataframes:</p>
+	      <br><img class="img-responsive center-block" src="IMG/concatenate02.png" style="width:400px;height:400px;"><br>
+	      <p>Now if we print these out, you can see that aside from the index, there is another extra column to the left, which marks the two different Dataframes with their corresponding keys. And you can even print out the different Dataframes separately even after concatenation.</p>
+	      <br><img class="img-responsive center-block" src="IMG/concatenateB02.png" style="width:350px;height:250px;"><br>
+	    </div>
+	  </div>
 	</div>
-      </div>
-      
-      <div class="panel panel-primary">
-	<div class="panel-heading">Output</div>
-	<div class="panel-body">
-	  <p>Now if you want to output the Dataframe, there is a lot of flexibilities here. If you had imported the data from a CSV file, you don't have to necessarily ouput the data to another CSV file. You can output to any other format that is made available to you by Pandas. And you don't have to worry about the convertion, Pandas take care of this for you.</p>
-	  <p>You can either output the entire Dataframe:</p>
-	  <br><img src="IMG/outputCSV0.PNG" style="width:250px;height:100px;">                <img src="IMG/outputCSV.PNG" style="width:300px;height:150px;"><br><br>
-	  <p>Or you can output part of the Dataframe:</p>
-	  <br><img src="IMG/outputCSV1.PNG" style="width:250px;height:100px;">                <img src="IMG/outputCSV2.PNG" style="width:200px;height:100px;"><br>
-	</div>
-      </div>
-      
-      <div class="panel panel-primary">
-	<div class="panel-heading">Concatenate</div>
-	<div class="panel-body">
-	  <p>Now, after some basic stuff, let's get to some more exciting aspects. Suppose there are two Dataframes created from two different dictionaries. You can combine these two Dataframes together, and they would look like this:</p>
-	  <br><img class="img-responsive center-block" src="IMG/concatenate01.png" style="width:350px;height:250px;"><br>
-	  <br><img class="img-responsive center-block" src="IMG/concatenateB01.png" style="width:350px;height:250px;"><br>
-	  <p>As you can see, it doesn't matter if the two Dataframes have different column lengths, because Pandas already take care of the empty spaces created during the concatenation process by filling it up with "NaN," which is used to denote empty/null array. This can make life better!</p>
-	  <p>You can even give each individual Dataframes an unique key so that even after concatenating them together, you can make reference to different Dataframes:</p>
-	  <br><img class="img-responsive center-block" src="IMG/concatenate02.png" style="width:400px;height:400px;"><br>
-	  <p>Now if we print these out, you can see that aside from the index, there is another extra column to the left, which marks the two different Dataframes with their corresponding keys. And you can even print out the different Dataframes separately even after concatenation.</p>
-	  <br><img class="img-responsive center-block" src="IMG/concatenateB02.png" style="width:350px;height:250px;"><br>
-	</div>
-      </div>
 
-      <div class="panel panel-primary">
-	<div class="panel-heading">Concatenate</div>
-	<div class="panel-body">
-	  <p>Now, after some basic stuff, let's get to some more exciting aspects. Suppose there are two Dataframes created from two different dictionaries. You can combine these two Dataframes together, and they would look like this:</p>
-	  <br><img class="img-responsive center-block" src="IMG/concatenate01.png" style="width:350px;height:250px;"><br>
-	  <br><img class="img-responsive center-block" src="IMG/concatenateB01.png" style="width:350px;height:250px;"><br>
-	  <p>As you can see, it doesn't matter if the two Dataframes have different column lengths, because Pandas already take care of the empty spaces created during the concatenation process by filling it up with "NaN," which is used to denote empty/null array. This can make life better!</p>
-	  <p>You can even give each individual Dataframes an unique key so that even after concatenating them together, you can make reference to different Dataframes:</p>
-	  <br><img class="img-responsive center-block" src="IMG/concatenate02.png" style="width:400px;height:400px;"><br>
-	  <p>Now if we print these out, you can see that aside from the index, there is another extra column to the left, which marks the two different Dataframes with their corresponding keys. And you can even print out the different Dataframes separately even after concatenation.</p>
-	  <br><img class="img-responsive center-block" src="IMG/concatenateB02.png" style="width:350px;height:250px;"><br>
+	<div id="pivot" class="tab-pane fade">
+	  <div class="panel panel-primary">
+	    <div class="panel-heading">Pivot</div>
+	    <div class="panel-body">
+	      <p>Pivot is one of Pandas' strong methods to reshape the its data structure according to user's need. Let's create a Dataframe with this dictionary:</p>
+	      <br><img class="img-responsive center-block" src="IMG/pivot0.png" style="width:450px;height:300px;"><br>
+	      <p>And the Dataframe will look like this, as you can see, it's not the most optimum way of organizing the data because there are many unnecessary repetitions in the structure:</p>
+	      <br><img class="img-responsive center-block" src="IMG/pivotB0.png" style="width:350px;height:300px;"><br>
+	      <p>To form a more compact data structure, we can reshape the Dataframe by having the column "Day" as the new index, the column "Time" as the new header, and the column "Customers" to fill in the content of each column. In order to do this, we just need to write:</p>
+	      <br><img class="img-responsive center-block" src="IMG/pivot1.png" style="width:450px;height:50px;"><br>
+	      <p>And the new Dataframe after pivoting is much cleaner. All the data from the new Dataframe  matches up with the original one, and the empty spaces are again handled by Pandas for us by filling the spots with empty/null array.</p>
+	      <br><img class="img-responsive center-block" src="IMG/pivotB1.png" style="width:350px;height:250px;"><br>
+	    </div>
+	  </div>
 	</div>
-      </div>
 
-      <div class="panel panel-primary">
-	<div class="panel-heading">Pivot</div>
-	<div class="panel-body">
-	  <p>Pivot is one of Pandas' strong methods to reshape the its data structure according to user's need. Let's create a Dataframe with this dictionary:</p>
-	  <br><img class="img-responsive center-block" src="IMG/pivot0.png" style="width:450px;height:300px;"><br>
-	  <p>And the Dataframe will look like this, as you can see, it's not the most optimum way of organizing the data because there are many unnecessary repetitions in the structure:</p>
-	  <br><img class="img-responsive center-block" src="IMG/pivotB0.png" style="width:350px;height:300px;"><br>
-	  <p>To form a more compact data structure, we can reshape the Dataframe by having the column "Day" as the new index, the column "Time" as the new header, and the column "Customers" to fill in the content of each column. In order to do this, we just need to write:</p>
-	  <br><img class="img-responsive center-block" src="IMG/pivot1.png" style="width:450px;height:50px;"><br>
-	  <p>And the new Dataframe after pivoting is much cleaner. All the data from the new Dataframe  matches up with the original one, and the empty spaces are again handled by Pandas for us by filling the spots with empty/null array.</p>
-	  <br><img class="img-responsive center-block" src="IMG/pivotB1.png" style="width:350px;height:250px;"><br>
-	</div>
       </div>
-      
-    </div>
+    </center>
   </body>
 </html>
